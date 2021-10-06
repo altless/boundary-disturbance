@@ -1,5 +1,8 @@
 @charset 'utf-8';
 
+
+/*///////////////////////////////////////// basic css  ///////////////////*/
+
 html {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 14px;
@@ -16,35 +19,53 @@ a {
     color: inherit;
 }
 
-nav {
-    width: 1080px;
+/*///////////////////////////////////////// globa css  ///////////////////*/
+
+.sticky-nav {
+    width: 1636px;
     height: 50px;
-    margin: 0 auto;
+    margin: 0 140px;
+}
+.sticky-nav {
+    top : 0;
+    position: fixed;
+    -webkit-backdrop-filter: saturate(180%) blur(15px);
+    -moz-backdrop-filter: saturate(180%) blur(15px);
+    -o-backdrop-filter: saturate(180%) blur(15px);
+    backdrop-filter: saturate(180%) blur(15px);
+    z-index: 111;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 .nav-links {
-    position: fixed;
     width: inherit;
     height: inherit;
     display: flex;
     align-items: center;
     margin: 0 auto;
     border-bottom: solid 1px white ;
-    background-color: black;
     z-index: 111;
 }
-.nav-links :not(.logo){
-    font-size: 1em;
-    margin-left: 1rem;
-}
 .nav-links .logo {
-    font-size: 1.2em;
-    font-weight: bold;
+    display: flex;
     margin-right:auto;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 900;
 }
+.logo .logo-img{
+    margin-left: -5px;
+    width: 150px;
+    height: auto;
+}
+
+/* /////////////////////////scroll section 0 css start //////////////////////*/
+
 #scroll-section-0 {
-    width: 90vw;
+    top :0px;
+    position:absolute;
+    width: 1636px;
     height: 100vh;
-    margin: 0 5vw;
+    margin: 0 140px;
 }
 .scroll-icon-space {
     position: absolute;
@@ -72,16 +93,25 @@ nav {
 }
 .title-space {
     margin-top: 4vh;
-    width: 90vw;
+    width: 1636px;
     height: 40vh;
 }
 .title {
     font-size: 10rem;
+    height: 13rem;
 }
 .sub-title{
-    font-size: 4em;
+    height: 16vh;
+    font-size: 3rem;
+}
+.head-copy-space {
+    width: 798px;
+    height: ;
+    font-size: 1.5rem;
+    margin-bottom: 25vh;
 }
 .box-house{
+    width: 1636px;
     position: relative;
     display: flex;
     justify-content: space-between;
